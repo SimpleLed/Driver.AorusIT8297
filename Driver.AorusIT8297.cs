@@ -146,17 +146,17 @@ namespace Driver.AorusIT8297
             Bitmap vrm;
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
-            using (Stream myStream = myAssembly.GetManifestResourceStream("IT8297Driver.PCIArea.png"))
+            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.PCIArea.png"))
             {
                 pcieArea = (Bitmap)Image.FromStream(myStream);
             }
 
-            using (Stream myStream = myAssembly.GetManifestResourceStream("IT8297Driver.rgbpins.png"))
+            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.rgbpins.png"))
             {
                 rgbPins = (Bitmap)Image.FromStream(myStream);
             }
 
-            using (Stream myStream = myAssembly.GetManifestResourceStream("IT8297Driver.VRM.png"))
+            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.VRM.png"))
             {
                 vrm = (Bitmap)Image.FromStream(myStream);
             }
@@ -255,7 +255,12 @@ namespace Driver.AorusIT8297
                 IsSource = false,
                 SupportsPull = false,
                 SupportsCustomConfig = true,
-                Id = Guid.Parse("49440d02-8ca3-4e35-a9a3-88b024cc0e2d")
+                Id = Guid.Parse("49440d02-8ca3-4e35-a9a3-88b024cc0e2d"),
+                Author = "mad ninja",
+                CurrentVersion = new ReleaseNumber("1.0.0.3"),
+                GitHubLink = "https://github.com/SimpleLed/Driver.AorusIT8297",
+                Blurb = "Driver for Aorus motherboards featuring the IT8297 RGB controller.",
+                IsPublicRelease = false
             };
         }
 

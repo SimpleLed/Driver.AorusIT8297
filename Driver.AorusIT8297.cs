@@ -263,7 +263,7 @@ namespace Driver.AorusIT8297
                 SupportsCustomConfig = true,
                 Id = Guid.Parse("49440d02-8ca3-4e35-a9a3-88b024cc0e2d"),
                 Author = "mad ninja",
-                CurrentVersion = new ReleaseNumber("1.0.0.5"),
+                CurrentVersion = new ReleaseNumber("1.0.0.6"),
                 GitHubLink = "https://github.com/SimpleLed/Driver.AorusIT8297",
                 Blurb = "Driver for Aorus motherboards featuring the IT8297 RGB controller.",
                 IsPublicRelease = false

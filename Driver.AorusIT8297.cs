@@ -146,16 +146,20 @@ namespace Driver.AorusIT8297
             Bitmap vrm;
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
+
+            Debug.WriteLine("Loading PCI Area png");
             using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.PCIArea.png"))
             {
                 pcieArea = (Bitmap)Image.FromStream(myStream);
             }
 
+            Debug.WriteLine("Loading RGB Pins png");
             using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.rgbpins.png"))
             {
                 rgbPins = (Bitmap)Image.FromStream(myStream);
             }
 
+            Debug.WriteLine("Loading VRM Area png");
             using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.VRM.png"))
             {
                 vrm = (Bitmap)Image.FromStream(myStream);
@@ -180,7 +184,6 @@ namespace Driver.AorusIT8297
                 DeviceType = DeviceTypes.Fan,
                 Name = "ARGB Header 1",
                 ProductImage = rgbPins,
-                SupportsLEDCountOverride = true
             });
 
 
@@ -191,7 +194,6 @@ namespace Driver.AorusIT8297
                 DeviceType = DeviceTypes.Fan,
                 Name = "ARGB Header 2",
                 ProductImage = rgbPins,
-                SupportsLEDCountOverride = true
             });
 
 
@@ -199,7 +201,6 @@ namespace Driver.AorusIT8297
             {
                 LEDs = vrmLeds,
                 Driver = this,
-                DeviceType = DeviceTypes.MotherBoard,
                 Name = "VRM Block",
                 ProductImage = vrm
             });

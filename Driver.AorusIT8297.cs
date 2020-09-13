@@ -146,6 +146,11 @@ namespace Driver.AorusIT8297
             Bitmap vrm;
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
+            var fls=myAssembly.GetManifestResourceNames();
+            foreach (var fl in fls)
+            {
+                Debug.WriteLine(fl);
+            }
 
             Debug.WriteLine("Loading PCI Area png");
             using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.PCIArea.png"))

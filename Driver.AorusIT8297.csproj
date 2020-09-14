@@ -64,17 +64,15 @@
     <Compile Include="IT8297Config.cs" />
     <Compile Include="IT8297Extensions.cs" />
     <Compile Include="Models.cs" />
+    <Compile Include="PCIArea.png.cs" />
+    <Compile Include="rgbpins.png.cs" />
+    <Compile Include="VRM.png.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="PCIArea.png" />
-    <EmbeddedResource Include="rgbpins.png" />
-    <EmbeddedResource Include="VRM.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="CustomConfig.xaml">

@@ -145,30 +145,20 @@ namespace Driver.AorusIT8297
             Bitmap rgbPins;
             Bitmap vrm;
 
-            Assembly myAssembly = Assembly.GetExecutingAssembly();
-            var fls=myAssembly.GetManifestResourceNames();
-            foreach (var fl in fls)
-            {
-                Debug.WriteLine(fl);
-            }
-
             Debug.WriteLine("Loading PCI Area png");
-            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.PCIArea.png"))
-            {
-                pcieArea = (Bitmap)Image.FromStream(myStream);
-            }
+            
+                pcieArea = (Bitmap)Image.FromStream(new MemoryStream(PCIArea_png.binary));
+            
 
             Debug.WriteLine("Loading RGB Pins png");
-            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.rgbpins.png"))
-            {
-                rgbPins = (Bitmap)Image.FromStream(myStream);
-            }
+            
+                rgbPins = (Bitmap)Image.FromStream(new MemoryStream(rgbpins_png.binary));
+            
 
             Debug.WriteLine("Loading VRM Area png");
-            using (Stream myStream = myAssembly.GetManifestResourceStream("Driver.AorusIT8297.VRM.png"))
-            {
-                vrm = (Bitmap)Image.FromStream(myStream);
-            }
+           
+                vrm = (Bitmap)Image.FromStream(new MemoryStream(VRM_png.binary));
+           
 
 
             byte[] buffer = new byte[64];
@@ -263,7 +253,7 @@ namespace Driver.AorusIT8297
                 SupportsCustomConfig = true,
                 Id = Guid.Parse("49440d02-8ca3-4e35-a9a3-88b024cc0e2d"),
                 Author = "mad ninja",
-                CurrentVersion = new ReleaseNumber("1.0.0.6"),
+                CurrentVersion = new ReleaseNumber("1.0.0.7"),
                 GitHubLink = "https://github.com/SimpleLed/Driver.AorusIT8297",
                 Blurb = "Driver for Aorus motherboards featuring the IT8297 RGB controller.",
                 IsPublicRelease = false

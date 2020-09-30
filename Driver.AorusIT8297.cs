@@ -293,7 +293,7 @@ namespace Driver.AorusIT8297
             return "Aorus Motherboard";
         }
 
-
+        public event EventHandler DeviceRescanRequired;
 
 
         public static It8297ReportComplete GetReport(byte[] buffer)

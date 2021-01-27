@@ -24,5 +24,18 @@ namespace Driver.AorusIT8297
         {
             InitializeComponent();
         }
+
+        public Action<int, int> SetLEDCounts;
+
+        private void UpdateLEDCounts(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                SetLEDCounts?.Invoke(int.Parse(argb1.Text), int.Parse(argb2.Text));
+            }
+            catch
+            {
+            }
+        }
     }
 }

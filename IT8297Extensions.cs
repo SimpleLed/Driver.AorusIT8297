@@ -30,10 +30,10 @@ namespace Driver.AorusIT8297
             effect.MaxBrightness = 100;
             effect.MinBrightness = 0;
             //effect.Color0 = 0x00FF2100; //orange
-            effect.Period0 = 1200;
-            effect.Period1 = 1200;
-            effect.Period2 = 200;
-            effect.Period3 = 200;
+            effect.Period0 = 33;
+            effect.Period1 = 33;
+            effect.Period2 = 33;
+            effect.Period3 = 33;
             effect.EffectParam0 = 0; // ex color count to cycle through (max seems to be 7)
             effect.EffectParam1 = 0;
             effect.EffectParam2 = 1; // ex flash repeat count

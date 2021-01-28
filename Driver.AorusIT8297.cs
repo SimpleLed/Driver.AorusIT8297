@@ -867,9 +867,11 @@ OverrideSupport = OverrideSupport.All,
                 GitHubLink = "https://github.com/SimpleLed/Driver.AorusIT8297",
                 Blurb = "Driver for Aorus motherboards featuring the IT8297 RGB controller.",
                 IsPublicRelease = true,
-                SetDeviceOverride = SetDeviceOverride
+                SetDeviceOverride = SetDeviceOverride,
+                GetCustomDeviceSpecifications = GetCustomDeviceSpecifications
             };
         }
+
 
 
         GigabyteConfigModel ConfigData = new GigabyteConfigModel();
@@ -917,9 +919,6 @@ OverrideSupport = OverrideSupport.All,
 
         public event Events.DeviceChangeEventHandler DeviceAdded;
         public event Events.DeviceChangeEventHandler DeviceRemoved;
-
-        public event EventHandler DeviceRescanRequired;
-
 
         public static It8297ReportComplete GetReport(byte[] buffer)
         {

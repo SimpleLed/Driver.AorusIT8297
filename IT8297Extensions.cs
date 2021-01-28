@@ -268,7 +268,7 @@ namespace Driver.AorusIT8297
         {
             RGBPacket packet = new RGBPacket();
 
-            int sent_data = 0, res, k = 0;
+            int sent_data = 0, k = 0;
             int leds = 19;
             int left_leds = ledlist.Count;
 

@@ -48,7 +48,6 @@
     <Compile Include="GigabyteConfigModel.cs" />
     <Compile Include="IT8297Config.cs" />
     <Compile Include="IT8297Extensions.cs" />
-    <Compile Include="Models.cs" />
     <Compile Include="MotherboardHelpers.cs" />
     <Compile Include="PCIArea.png.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

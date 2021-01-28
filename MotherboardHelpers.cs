@@ -24,7 +24,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -46,7 +46,7 @@ namespace SimpleLedHelpers
                     }
                     return false;
                 }
-                catch (Exception e)
+                catch
                 {
                     return false;
                 }
@@ -65,7 +65,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -84,7 +84,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -103,7 +103,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -122,7 +122,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -141,7 +141,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -160,7 +160,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -179,7 +179,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -201,7 +201,7 @@ namespace SimpleLedHelpers
                     }
                     return false;
                 }
-                catch (Exception e)
+                catch
                 {
                     return false;
                 }
@@ -223,7 +223,7 @@ namespace SimpleLedHelpers
                     }
                     return false;
                 }
-                catch (Exception e)
+                catch
                 {
                     return false;
                 }
@@ -242,7 +242,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -261,7 +261,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -280,7 +280,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -299,7 +299,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -318,7 +318,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }
@@ -337,7 +337,7 @@ namespace SimpleLedHelpers
                     }
                     return "";
                 }
-                catch (Exception e)
+                catch
                 {
                     return "";
                 }

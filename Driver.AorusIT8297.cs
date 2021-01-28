@@ -5,14 +5,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using HidSharp;
 using SimpleLed;
 using DeviceTypes = SimpleLed.DeviceTypes;
-using System.IO;
-using System.Reflection;
 using System.Windows.Controls;
 using SimpleLedHelpers;
 using Image = System.Drawing.Image;
@@ -20,7 +16,7 @@ using Image = System.Drawing.Image;
 
 namespace Driver.AorusIT8297
 {
-    public class IT8296Provider : ISimpleLedWithConfig
+    public class IT8296Provider : ISimpleLed
     {
 
         public void SetDeviceOverride(ControlDevice controlDevice, CustomDeviceSpecification deviceSpec)
@@ -70,19 +66,17 @@ namespace Driver.AorusIT8297
 
         }
 
-        private CustomConfig configXaml;
+        //private CustomConfig configXaml;
 
         public IT8296Provider()
         {
-            configXaml = new CustomConfig();
-            configXaml.argb1.Text = "21";
-            configXaml.argb2.Text = "21";
+            
         }
 
         public void Configure(DriverDetails driverDetails)
         {
             
-            configXaml.SetLEDCounts = SetLedCounts;
+            //configXaml.SetLEDCounts = SetLedCounts;
             
             IT8297Config config = new IT8297Config();
 
@@ -888,16 +882,12 @@ OverrideSupport = OverrideSupport.All,
 
         public void PutConfig<T>(T config) where T : SLSConfigData
         {
-            GigabyteConfigModel proxy = config as GigabyteConfigModel;
-            ConfigData = proxy;
-            configXaml.argb1.Text = proxy.ARGB1Leds.ToString();
-            configXaml.argb2.Text = proxy.ARGB2Leds.ToString();
-            DeviceSetup();
+            
         }
 
         public UserControl GetCustomConfig(ControlDevice controlDevice)
         {
-            return configXaml;
+            return null;
         }
 
         private bool isDirty = false;
